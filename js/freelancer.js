@@ -61,6 +61,15 @@
     $.magnificPopup.close();
   });
 
+  // Close popup when the escape button is clicked
+  document.onkeydown = function (e) {
+    var keyCode = e.keyCode;
+    if(keyCode === 27) {
+        e.preventDefault();
+        $.magnificPopup.close();
+    }
+  };
+
   // Floating label headings for the contact form
   $(function() {
     $("body").on("input propertychange", ".floating-label-form-group", function(e) {

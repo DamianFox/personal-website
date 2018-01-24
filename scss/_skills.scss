@@ -1,0 +1,72 @@
+.skill-element {
+	&:not(:last-child) {
+		margin-bottom: 1em;
+	}
+}
+
+.skill-element {
+	h3 {
+	    float: left;
+	    text-transform: none;
+	    @include body-font;
+	    margin-top: 0;
+	    font-size: 15px;
+	    font-weight: 200;
+	}
+}
+
+.skill-line {
+    clear: both;
+    background-color: $gray-200;
+    height: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.perc-50 {
+    width: 50%;
+}
+
+.perc-65 {
+    width: 65%;
+}
+
+.perc-80 {
+    width: 80%;
+}
+
+.perc-87 {
+    width: 87%;
+}
+
+.perc-92 {
+    width: 92%;
+}
+
+.skill-line-inside-wr {
+    height: 15px;
+}
+
+.skill-element:nth-child(2n) {
+	.skill-line-inside {
+		background-color: $secondary;
+	}
+}
+
+.skill-element:nth-child(2n+1) {
+	.skill-line-inside {
+		background-color: $primary;
+	}
+}
+
+.skill-line-inside {
+    height: 15px;
+    -webkit-animation: widthIn 1s;
+    -moz-animation: widthIn 1s;
+    -ms-animation: widthIn 1s;
+    -o-animation: widthIn 1s;
+    animation: widthIn 1s;
+    animation-name: widthIn;
+    -webkit-border-radius: 15px 0 0 15px;
+    border-radius: 15px 0 0 15px;
+}

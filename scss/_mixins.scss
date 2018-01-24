@@ -1,8 +1,14 @@
 @mixin body-font() {
-  font-family: 'Lato';
+  // font-family: 'Poppins', sans-serif;
+	font-family: 'Cardo', serif;
 }
 
 @mixin heading-font() {
-  font-weight: 700;
-  font-family: 'Montserrat';
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+}
+
+@mixin brand-font() {
+	font-family: 'Homemade Apple', cursive;
+	letter-spacing: 1.5px;
 }

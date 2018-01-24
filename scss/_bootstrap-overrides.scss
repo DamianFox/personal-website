@@ -20,6 +20,18 @@ a {
   background-color: $secondary !important;
 }
 
+.bg-tertiary {
+  background-color: $tertiary !important;
+}
+
+.bg-quaternary {
+  background-color: $quaternary !important;
+}
+
+.text-black {
+  color: $black !important;
+}
+
 .text-primary {
   color: $primary !important;
 }
@@ -28,14 +40,30 @@ a {
   color: $secondary !important;
 }
 
+.text-tertiary {
+  color: $tertiary !important;
+}
+
+.text-muted {
+  font-size: 1em;
+  line-height: 1.8em;
+  color: $gray-700 !important;
+  margin-top: 2em;
+}
+
+.lead {
+  font-size: 1.15em;
+  line-height: 1.6em;
+}
+
 .btn-primary {
   background-color: $primary;
   border-color: $primary;
   &:hover,
   &:focus,
   &:active {
-    background-color: darken($primary, 10%);
-    border-color: darken($primary, 10%);
+    background-color: darken($primary, 10%) !important;
+    border-color: darken($primary, 10%) !important;
   }
 }
 
@@ -47,5 +75,17 @@ a {
   &:active {
     background-color: darken($secondary, 10%);
     border-color: darken($secondary, 10%);
+  }
+}
+
+.btn-outline-light {
+  background-color: $primary;
+  border-color: $white;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $white;
+    border-color: $white;
+    color: $primary;
   }
 }

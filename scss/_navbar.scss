@@ -5,6 +5,8 @@
   @include heading-font;
   .navbar-brand {
     color: $white;
+    font-style: italic;
+    @include brand-font;
   }
   .navbar-nav {
     margin-top: 1rem;
@@ -13,14 +15,14 @@
       a.nav-link {
         color: $white;
         &:hover {
-          color: $primary;
+          color: $white;
         }
         &:active,
         &:focus {
           color: $white;
         }
         &.active {
-          color: $primary;
+          color: $secondary;
         }
       }
     }
@@ -47,21 +49,38 @@
       margin-top: 0;
     }
     .navbar-nav > li.nav-item > a.nav-link.active {
-      color: $white;
-      background: $primary;
+      color: $primary;
       &:active,
       &:focus,
       &:hover {
-        color: $white;
-        background: $primary;
+        color: $secondary;
       }
     }
   }
   #mainNav.navbar-shrink {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: $white;
+    border-bottom: 2px solid $header-border;
     .navbar-brand {
-      font-size: 1.5em;
+      color: $black;
+      font-size: 1.6em;
+      // font-style: italic;
+    }
+    li.nav-item {
+      a.nav-link {
+        color: $black;
+        &:hover {
+          color: $secondary;
+        }
+        &:active,
+        &:focus {
+          color: $secondary;
+        }
+        &.active {
+          color: $secondary;
+        }
+      }
     }
   }
 }
