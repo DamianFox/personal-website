@@ -5,7 +5,7 @@
   @include heading-font;
   .navbar-brand {
     color: $white;
-    font-style: italic;
+    // font-style: italic;
     @include brand-font;
   }
   .navbar-nav {

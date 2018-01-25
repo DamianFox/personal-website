@@ -1,5 +1,5 @@
 /*!
- * Start Bootstrap - Freelancer v4.0.0-beta.2 (https://startbootstrap.com/template-overviews/freelancer)
+ * Start Bootstrap - Freelancer v4.0.0-beta.2 (http://www.damianofossa.com)
  * Copyright 2013-2018 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/master/LICENSE)
  */
@@ -85,9 +85,8 @@ section {
   font-family: 'Open Sans', sans-serif; }
   #mainNav .navbar-brand {
     color: #fff;
-    font-style: italic;
     font-family: 'Homemade Apple', cursive;
-    letter-spacing: 1.5px; }
+    letter-spacing: .1em; }
   #mainNav .navbar-nav {
     margin-top: 1rem;
     letter-spacing: 0.0625rem; }
