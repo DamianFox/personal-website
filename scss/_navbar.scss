@@ -32,55 +32,77 @@
     padding: 0.8rem;
   }
 }
-// @media(min-width:992px) {
-  #mainNav {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
-    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
-    transition: padding-top 0.3s, padding-bottom 0.3s;
-    .navbar-brand {
-      font-size: 2em;
-      -webkit-transition: font-size 0.3s;
-      -moz-transition: font-size 0.3s;
-      transition: font-size 0.3s;
+  
+#mainNav {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+  -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+  transition: padding-top 0.3s, padding-bottom 0.3s;
+  .navbar-brand {
+    font-size: 2em;
+    -webkit-transition: font-size 0.3s;
+    -moz-transition: font-size 0.3s;
+    transition: font-size 0.3s;
+  }
+  .navbar-nav {
+    margin-top: 0;
+  }
+  .navbar-nav > li.nav-item > a.nav-link.active {
+    color: $primary;
+    &:active,
+    &:focus,
+    &:hover {
+      color: $secondary;
     }
-    .navbar-nav {
-      margin-top: 0;
-    }
-    .navbar-nav > li.nav-item > a.nav-link.active {
-      color: $primary;
-      &:active,
-      &:focus,
+  }
+}
+#mainNav.navbar-shrink {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: $white;
+  border-bottom: 2px solid $header-border;
+
+  #navbarResponsive {
+    border-bottom: none !important;
+  }
+  .navbar-brand {
+    color: $black;
+    font-size: 1.6em;
+  }
+  li.nav-item {
+    a.nav-link {
+      color: $black;
       &:hover {
+        color: $secondary;
+      }
+      &:active,
+      &:focus {
+        color: $secondary;
+      }
+      &.active {
         color: $secondary;
       }
     }
   }
-  #mainNav.navbar-shrink {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+}
+#mainNav.fixed-top {
+  #navbarResponsive {
     background-color: $white;
     border-bottom: 2px solid $header-border;
-    .navbar-brand {
+
+    a {
       color: $black;
-      font-size: 1.6em;
-      // font-style: italic;
-    }
-    li.nav-item {
-      a.nav-link {
-        color: $black;
-        &:hover {
-          color: $secondary;
-        }
-        &:active,
-        &:focus {
-          color: $secondary;
-        }
-        &.active {
-          color: $secondary;
-        }
-      }
+      margin-left: .5rem;
     }
   }
-// }
+}
+
+@media(max-width:500px) {
+  #mainNav.fixed-top {
+    .navbar-brand {
+      // color: $black;
+      font-size: 1.2em;
+    }
+  }
+}
