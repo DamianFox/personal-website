@@ -125,6 +125,8 @@ section {
   padding-bottom: 1rem;
   background-color: #fff;
   border-bottom: 2px solid #E6EAEA; }
+  #mainNav.navbar-shrink #navbarResponsive {
+    border-bottom: none !important; }
   #mainNav.navbar-shrink .navbar-brand {
     color: #000;
     font-size: 1.6em; }
@@ -136,6 +138,17 @@ section {
       color: #aa863a; }
     #mainNav.navbar-shrink li.nav-item a.nav-link.active {
       color: #aa863a; }
+
+#mainNav.fixed-top #navbarResponsive {
+  background-color: #fff;
+  border-bottom: 2px solid #E6EAEA; }
+  #mainNav.fixed-top #navbarResponsive a {
+    color: #000;
+    margin-left: .5rem; }
+
+@media (max-width: 500px) {
+  #mainNav.fixed-top .navbar-brand {
+    font-size: 1.2em; } }
 
 header.masthead {
   padding-top: calc(6rem + 72px);
