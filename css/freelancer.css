@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/master/LICENSE)
  */
 body {
-  font-family: 'Cardo', serif; }
+  font-family: 'Open Sans', serif; }
 
 h1,
 h2,
@@ -13,7 +13,8 @@ h4,
 h5,
 h6 {
   font-weight: 600;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Metrophobic', sans-serif;
+  line-height: 1.4; }
 
 hr.star-light,
 hr.star-dark,
@@ -44,16 +45,35 @@ hr.star-dark:after {
   background-color: #fff; }
 
 section {
-  padding: 7rem 0; }
+  padding: 7.05rem 0; }
   section h2 {
     font-size: 2rem;
     line-height: 2rem;
+    margin-bottom: 1.8em;
     font-weight: 600;
-    font-family: 'Open Sans', sans-serif; }
+    font-family: 'Metrophobic', sans-serif; }
   @media (min-width: 992px) {
     section h2 {
       font-size: 2.8rem;
       line-height: 2.5rem; } }
+  section .header-div {
+    margin-bottom: 5em; }
+  section .section-description {
+    margin-top: 1.5em;
+    margin-bottom: 3em; }
+    section .section-description a {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: underline; }
+      section .section-description a:focus, section .section-description a:hover, section .section-description a:active {
+        color: black;
+        text-decoration: none; }
+
+.service-heading {
+  margin-top: 1em; }
+
+#testimonials {
+  padding: 7.2rem 0 0 0; }
 
 .btn-xl {
   padding: 1rem 1.75rem;
@@ -75,14 +95,17 @@ section {
   .scroll-to-top a {
     width: 3.5rem;
     height: 3.5rem;
-    background-color: rgba(33, 37, 41, 0.5);
+    background-color: rgba(33, 37, 41, 0.1);
     line-height: 3.1rem; }
+
+.margin-auto {
+  margin: 0 auto; }
 
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-weight: 600;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Metrophobic', sans-serif; }
   #mainNav .navbar-brand {
     color: #fff;
     font-family: 'Permanent Marker', cursive;
@@ -125,6 +148,10 @@ section {
   padding-bottom: 1rem;
   background-color: #fff;
   border-bottom: 2px solid #E6EAEA; }
+  #mainNav.navbar-shrink button {
+    background-color: #fff !important;
+    color: #729f98 !important;
+    cursor: pointer; }
   #mainNav.navbar-shrink #navbarResponsive {
     border-bottom: none !important; }
   #mainNav.navbar-shrink .navbar-brand {
@@ -139,12 +166,19 @@ section {
     #mainNav.navbar-shrink li.nav-item a.nav-link.active {
       color: #aa863a; }
 
-#mainNav.fixed-top #navbarResponsive {
+#mainNav button[aria-expanded="true"] + #navbarResponsive,
+#mainNav .collapsed + #navbarResponsive {
   background-color: #fff;
   border-bottom: 2px solid #E6EAEA; }
-  #mainNav.fixed-top #navbarResponsive a {
+  #mainNav button[aria-expanded="true"] + #navbarResponsive a,
+  #mainNav .collapsed + #navbarResponsive a {
     color: #000;
     margin-left: .5rem; }
+    #mainNav button[aria-expanded="true"] + #navbarResponsive a:active, #mainNav button[aria-expanded="true"] + #navbarResponsive a:focus, #mainNav button[aria-expanded="true"] + #navbarResponsive a:hover,
+    #mainNav .collapsed + #navbarResponsive a:active,
+    #mainNav .collapsed + #navbarResponsive a:focus,
+    #mainNav .collapsed + #navbarResponsive a:hover {
+      color: #aa863a; }
 
 @media (max-width: 500px) {
   #mainNav.fixed-top .navbar-brand {
@@ -159,18 +193,23 @@ header.masthead {
   header.masthead h2 {
     font-size: 1.4rem;
     font-weight: 600;
-    font-family: 'Open Sans', sans-serif; }
-  header.masthead .img-fluid {
-    width: 240px;
-    height: 240px;
+    font-family: 'Metrophobic', sans-serif; }
+  header.masthead .img-container {
+    width: 250px;
+    height: 250px;
+    margin: 20px auto 40px auto;
+    background-image: url("../img/Damiano-Fossa.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
     border-radius: 50%; }
 
 @media (min-width: 992px) {
   header.masthead {
     padding-top: calc(6rem + 106px);
-    padding-bottom: 6rem; }
+    padding-bottom: 7.5rem; }
     header.masthead h1 {
-      font-size: 4.25em;
+      font-size: 2.6em;
       line-height: 4rem; }
     header.masthead h2 {
       font-size: 1.58em; } }
@@ -181,7 +220,7 @@ header.masthead {
 .skill-element h3 {
   float: left;
   text-transform: none;
-  font-family: 'Cardo', serif;
+  font-family: 'Open Sans', serif;
   margin-top: 0;
   font-size: 15px;
   font-weight: 200; }
@@ -333,9 +372,11 @@ form .row:first-child .floating-label-form-group {
   background-color: #f0eceb; }
 
 a {
-  color: #729f98; }
+  color: #729f98;
+  font-weight: 500; }
   a:focus, a:hover, a:active {
-    color: #5a847e; }
+    text-decoration: none;
+    color: #456661; }
 
 .btn {
   border-width: 2px; }
@@ -367,14 +408,23 @@ a {
 .text-muted {
   font-size: 1em;
   line-height: 1.8em;
-  color: #495057 !important;
   margin-top: 2em; }
+  .text-muted a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: underline; }
+    .text-muted a:focus, .text-muted a:hover, .text-muted a:active {
+      color: black;
+      text-decoration: none; }
+
+#services .text-muted {
+  color: #fff !important; }
 
 .text-bold {
   font-weight: 700; }
 
 .lead {
-  font-size: 1.15em;
+  font-size: 1.1em;
   line-height: 1.6em; }
 
 .btn-primary {
@@ -398,6 +448,12 @@ a {
     background-color: #fff;
     border-color: #fff;
     color: #729f98; }
+
+#we-factory-logo {
+  max-width: 125%; }
+
+#refugees-nation-logo {
+  max-width: 80%; }
 
 /*
  * Bootstrap carousel
