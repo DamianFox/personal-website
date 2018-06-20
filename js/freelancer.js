@@ -44,10 +44,31 @@
       $("#mainNav").removeClass("navbar-shrink");
     }
   };
+
   // Collapse now if page is not at top
   navbarCollapse();
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
+
+  // Add ID to the DIV on mobile screens
+  $(window).on('resize', function(){
+    var width = $(this).width();
+    if(width <= 992){
+      $(".navbar-collapse").attr('id', 'navbarResponsive');
+    } else {
+      $(".navbar-collapse").removeAttr('id', 'navbarResponsive');
+    }
+  });
+
+  $( document ).ready(function() {
+    var width = $(this).width();
+    console.log(width);
+    if(width <= 992){
+      $(".navbar-collapse").attr('id', 'navbarResponsive');
+    } else {
+      $(".navbar-collapse").removeAttr('id', 'navbarResponsive');
+    }
+  });
 
   // Modal popup$(function () {
   $('.portfolio-item').magnificPopup({
