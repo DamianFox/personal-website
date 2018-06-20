@@ -10,6 +10,7 @@ h4,
 h5,
 h6 {
   @include heading-font;
+  line-height: 1.4;
 }
 
 // Custom Horizontal Rule with Star Icon
@@ -24,17 +25,6 @@ hr.star-black {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
 }
-
-// hr.star-light:after,
-// hr.star-dark:after {
-//   position: relative;
-//   top: -.8em;
-//   display: inline-block;
-//   padding: 0 0.25em;
-//   content: '\f005';
-//   font-family: FontAwesome;
-//   font-size: 2em;
-// }
 
 hr.star-light {
   border-color: $white;
@@ -58,10 +48,11 @@ hr.star-dark:after {
 
 // Section Padding Settings
 section {
-  padding: 7rem 0;
+  padding: 7.05rem 0;
   h2 {
     font-size: 2rem;
     line-height: 2rem;
+    margin-bottom: 1.8em;
     @include heading-font;
   }
   @media (min-width: 992px) {
@@ -70,7 +61,38 @@ section {
       line-height: 2.5rem;
     }
   }
+
+  .header-div {
+    margin-bottom: 5em;
+  }
+
+  .section-description {
+    margin-top: 1.5em;
+    margin-bottom: 3em;
+
+    a {
+      color: $white;
+      font-weight: 600;
+      text-decoration: underline;
+      
+      &:focus,
+      &:hover,
+      &:active {
+        color: darken($tertiary, 25%);
+        text-decoration: none;
+      }
+    }
+  }
+
 }
+
+.service-heading {
+  margin-top: 1em;
+}
+
+#testimonials {
+  padding: 7.2rem 0 0 0;
+} 
 
 // Custom Button Size
 .btn-xl {
@@ -97,7 +119,11 @@ section {
   a {
     width: 3.5rem;
     height: 3.5rem;
-    background-color: fade-out($gray-900, 0.5);
+    background-color: fade-out($gray-900, 0.9);
     line-height: 3.1rem;
   }
+}
+
+.margin-auto {
+  margin: 0 auto;
 }

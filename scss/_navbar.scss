@@ -5,7 +5,6 @@
   @include heading-font;
   .navbar-brand {
     color: $white;
-    // font-style: italic;
     @include brand-font;
   }
   .navbar-nav {
@@ -63,6 +62,12 @@
   background-color: $white;
   border-bottom: 2px solid $header-border;
 
+  button {
+    background-color: $white !important;
+    color: #729f98 !important;
+    cursor: pointer;
+  }
+
   #navbarResponsive {
     border-bottom: none !important;
   }
@@ -86,14 +91,21 @@
     }
   }
 }
-#mainNav.fixed-top {
-  #navbarResponsive {
+#mainNav {
+  button[aria-expanded="true"] + #navbarResponsive,
+  .collapsed + #navbarResponsive {
     background-color: $white;
     border-bottom: 2px solid $header-border;
 
     a {
       color: $black;
       margin-left: .5rem;
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: $secondary;
+      }
     }
   }
 }
@@ -101,7 +113,6 @@
 @media(max-width:500px) {
   #mainNav.fixed-top {
     .navbar-brand {
-      // color: $black;
       font-size: 1.2em;
     }
   }

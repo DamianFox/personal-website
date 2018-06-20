@@ -1,10 +1,10 @@
 @mixin body-font() {
-	font-family: 'Cardo', serif;
+	font-family: 'Open Sans', serif;
 }
 
 @mixin heading-font() {
 	font-weight: 600;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Metrophobic', sans-serif;
 }
 
 @mixin author-font() {
@@ -15,7 +15,5 @@
 
 @mixin brand-font() {
 	font-family: 'Permanent Marker', cursive;
-	// font-style: italic;
-	// font-weight: bold;
 	letter-spacing: .15em;
 }

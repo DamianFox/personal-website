@@ -9,23 +9,27 @@ header.masthead {
     font-size: 1.4rem;
     @include heading-font;
   }
-  .img-fluid {
-    width: 240px;
-    height: 240px;
+  .img-container {
+    width: 250px;
+    height: 250px;
+    margin: 20px auto 40px auto;
+    background-image: url("../img/Damiano-Fossa.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
     border-radius: 50%;
   }
 }
 @media (min-width: 992px) {
   header.masthead {
     padding-top: calc(6rem + 106px);
-    padding-bottom: 6rem;
+    padding-bottom: 7.5rem;
     h1 {
-      font-size: 4.25em;
+      font-size: 2.6em;
       line-height: 4rem;
     }
     h2 {
       font-size: 1.58em;
     }
-
   }
 }
